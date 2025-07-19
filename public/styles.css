@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ffe6f0, #fdf6ff);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card {
+    background: #fff0f5;
+    padding: 50px 40px;
+    border-radius: 18px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    width: 90%;
+    max-width: 420px;
+    border: 2px solid #ffd6e8;
+    animation: fadeIn 0.7s ease;
+  }
+  
+  h1 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #d63384;
+    margin-bottom: 20px;
+  }
+  
+  .note {
+    font-size: 13px;
+    color: #666;
+    margin-top: 12px;
+  }
+  
+  input {
+    padding: 12px;
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-size: 15px;
+  }
+  
+  button.btn {
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.06);
+  }
+  
+  .pastel-pink {
+    background-color: #ffcce5;
+    color: #6a0d45;
+  }
+  .pastel-pink:hover {
+    background-color: #ff99cc;
+  }
+  
+  .pastel-purple {
+    background-color: #f0e5ff;
+    color: #4c2a85;
+  }
+  .pastel-purple:hover {
+    background-color: #e1ccff;
+  }
+  
+  .pastel-blue {
+    background-color: #d8f0ff;
+    color: #175b7e;
+  }
+  .pastel-blue:hover {
+    background-color: #b4e4ff;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

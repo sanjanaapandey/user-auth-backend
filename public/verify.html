@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Verify OTP</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="card">
+    <h1>Verify OTP</h1>
+    <form id="verify-form">
+      <input type="email" id="email" placeholder="Email or leave blank" />
+      <input type="text" id="mobile" placeholder="Mobile or leave blank" />
+      <input type="text" id="otp" placeholder="OTP" required />
+      <button type="submit" class="btn pastel-purple">Verify</button>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById('verify-form');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const data = {
+        email: document.getElementById('email').value,
+        mobile: document.getElementById('mobile').value,
+        otp: document.getElementById('otp').value
+      };
+
+      try {
+        const res = await fetch('/api/verify-otp', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+
+        const result = await res.json();
+        alert(result.message);
+        console.log(result);
+      } catch (err) {
+        alert('OTP verification failed');
+      }
+    });
+  </script>
+</body>
+</html>
